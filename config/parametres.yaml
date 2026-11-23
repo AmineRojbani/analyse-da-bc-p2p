@@ -1,0 +1,541 @@
+# =============================================================================
+# PARAMÈTRES DE LA SIMULATION : AutoSys Capteurs SA (entreprise fictive)
+# =============================================================================
+# Règle de méthode (voir la fiche d'identité) :
+#   - Toutes les valeurs de ce fichier, y compris les seuils de la section
+#     "validation" tout en bas, sont FIXÉES AVANT la première exécution.
+#   - On ne les retouche pas après avoir vu les résultats pour "faire passer"
+#     un contrôle. Si un contrôle échoue, on le documente et on décide ensuite
+#     (en le justifiant par écrit) de changer ou non un paramètre.
+#
+# Étiquettes placées en commentaire sur chaque valeur :
+#   [SOURCÉ]      valeur issue d'un repère publié (cité dans la fiche)
+#   [CHOIX]       décision de conception, pas une mesure
+#   [HYPOTHÈSE]   valeur plausible sans source publique trouvée -> à faire
+#                 relire par un professionnel des achats / analyse de sensibilité
+#   [À CALIBRER]  à comparer à des données réelles (ex. BPI Challenge 2019)
+# =============================================================================
+
+meta:
+  entreprise: "AutoSys Capteurs SA (fictive)"
+  graine: 20261107            # [CHOIX] graine du générateur aléatoire : même graine = mêmes fichiers (contrôle V8)
+  debut_periode: "2024-10-01" # [CHOIX] 24 mois pour voir la saisonnalité deux fois
+  fin_periode: "2026-09-30"
+  date_extraction: "2026-11-04"  # [CHOIX] extraction ~5 semaines après la fin : laisse le temps aux DA récentes d'être converties
+  taux_usd_par_eur: 1.08      # [HYPOTHÈSE] taux fixe pour toute la période (simplification)
+  inflation_annuelle: 0.02    # [HYPOTHÈSE] hausse annuelle moyenne des prix
+
+export:
+  separateur: ";"             # [CHOIX] CSV adapté à Excel / Power BI en français
+  decimal: ","
+  encodage: "utf-8-sig"
+  dossier_sortie: "sorties"
+
+volumes:
+  nb_annees: 2                       # [CHOIX]
+  achats_annuels_eur: 100000000      # [CHOIX] ordre de grandeur de la fiche (~100 M€ par an)
+  part_directs: 0.60                 # [SOURCÉ] médiane Sievo automobile/industrie : 60 % directs / 40 % indirects
+  lignes_da_par_an: 16000            # [HYPOTHÈSE] objectif de conception : donne 10 000 à 20 000 lignes de BC par an
+  part_lignes_directes: 0.40         # [HYPOTHÈSE] les indirects dominent en nombre de lignes, les directs en valeur
+
+calage:
+  # Les montants cibles sont fixés sur la valeur des DA ; une partie ne devient jamais BC (rejet, abandon...),
+  # les BC sans DA en ajoutent. Ce coefficient est le rapport attendu valeur BC / valeur DA.
+  part_valeur_convertie_attendue: 0.95   # [HYPOTHÈSE] fixé avant simulation, non retouché
+
+structure:
+  societe: "1000"
+  organisation_achats: "1000"
+  sites:                             # [CHOIX] 3 sites, le siège est le plus gros
+    "1010": 0.60
+    "1020": 0.25
+    "1030": 0.15
+  groupes_achats:                    # [CHOIX] repris de la fiche : 5 acheteurs
+    P10: [ACH_D01, ACH_D02]          # achats directs
+    P20: [ACH_M01]                   # pièces de rechange et emballages
+    P30: [ACH_S01, ACH_S02]          # informatique, services, logistique
+
+demandeurs:                          # [CHOIX] services demandeurs de la fiche
+  departements:
+    production:        {n: 8, prefixe: REQ_PROD}
+    maintenance:       {n: 5, prefixe: REQ_MAINT}
+    logistique:        {n: 4, prefixe: REQ_LOG}
+    qualite:           {n: 3, prefixe: REQ_QUAL}
+    informatique:      {n: 3, prefixe: REQ_IT}
+    services_generaux: {n: 3, prefixe: REQ_SG}
+    ingenierie:        {n: 5, prefixe: REQ_ENG}
+
+fournisseurs:
+  part_multifamille: 0.08            # [HYPOTHÈSE] part des fournisseurs actifs sur une 2e famille du même type
+  ecart_prix_fournisseur: 0.04       # [HYPOTHÈSE] écart-type du niveau de prix propre à chaque fournisseur
+  conditions_paiement:               # [HYPOTHÈSE] 30 / 45 / 60 jours (fiche)
+    Z030: 0.30
+    Z045: 0.40
+    Z060: 0.30
+  pays_en_dollars: [CN, TW, KR, JP, MY, US]   # [HYPOTHÈSE] fiche : "quelques fournisseurs en dollars (électronique d'Asie)"
+
+articles:
+  sigma_popularite: 0.9              # [HYPOTHÈSE] écart de fréquence d'achat entre références (quelques références très commandées)
+  concentration_principal: 4.0       # [HYPOTHÈSE] plus la valeur est haute, plus le fournisseur principal pèse sur une référence multi-sources
+  sources_max: 5                     # [CHOIX] plafond de fournisseurs qualifiés par référence
+
+saisonnalite:
+  # Intensité de création des DA par jour ouvré, selon le mois.
+  facteur_mois:                      # [HYPOTHÈSE] calendrier industriel français : fermeture estivale en août, creux fin décembre
+    1: 0.95
+    2: 1.00
+    3: 1.10
+    4: 1.00
+    5: 0.95
+    6: 1.10
+    7: 0.90
+    8: 0.50
+    9: 1.15
+    10: 1.10
+    11: 1.05
+    12: 0.70
+  jours_mrp: [0, 3]                  # [HYPOTHÈSE] le MRP tourne le lundi (0) et le jeudi (3)
+
+processus:
+  seuils_approbation: [1000, 10000]  # [HYPOTHÈSE, fiche] total de la DA : < 1 000 / 1 000 à 10 000 / > 10 000 euros
+  max_lignes_par_da: 8               # [CHOIX]
+  approbation:                       # délai en jours ouvrés (médiane, dispersion log-normale) et rejet, par palier
+    S1: {mediane_jours: 1.0, sigma: 0.6, max_jours: 15, p_rejet: 0.03}   # [HYPOTHÈSE] [À CALIBRER]
+    S2: {mediane_jours: 2.5, sigma: 0.7, max_jours: 25, p_rejet: 0.05}   # [HYPOTHÈSE] [À CALIBRER]
+    S3: {mediane_jours: 5.0, sigma: 0.8, max_jours: 40, p_rejet: 0.08}   # [HYPOTHÈSE] [À CALIBRER]
+  p_suppression_mrp: 0.04            # [HYPOTHÈSE] DA du MRP supprimées par un nouveau calcul du MRP
+  p_abandon_apres_liberation: 0.03   # [HYPOTHÈSE] DA libérées mais jamais commandées
+  delai_da_bc:                       # jours ouvrés entre libération (ou création si MRP) et BC
+    direct_mrp:     {mediane: 2.0, sigma: 0.7}   # [HYPOTHÈSE] [À CALIBRER] contrats-cadres : commande rapide
+    direct_manuel:  {mediane: 4.0, sigma: 0.8}   # [HYPOTHÈSE] [À CALIBRER]
+    indirect:       {mediane: 5.0, sigma: 1.0}   # [HYPOTHÈSE] [À CALIBRER]
+  file_attente_longue: {proba: 0.05, mediane: 20.0, sigma: 0.6}   # [HYPOTHÈSE] queue longue : certaines lignes attendent des semaines
+  delai_max_jours: 90                # [CHOIX]
+  p_fractionnement: 0.03             # [HYPOTHÈSE] fiche : "quelques pour cent des lignes"
+  p_fractionnement_autre_fournisseur: 0.40   # [HYPOTHÈSE] si la référence a plusieurs fournisseurs qualifiés
+  delai_2e_bc: {mediane: 5.0, sigma: 0.7}    # [HYPOTHÈSE] jours ouvrés entre les deux BC d'une DA fractionnée
+  p_commande_partielle: 0.02         # [HYPOTHÈSE] DA commandée en partie seulement
+  p_fournisseur_souhaite_rempli: {mrp: 0.80, manuel: 0.15}   # [HYPOTHÈSE] champ "fournisseur souhaité" renseigné
+  p_fournisseur_different_du_souhaite: 0.10  # [HYPOTHÈSE]
+
+prix:
+  bruit_estimation_da: 0.03          # [HYPOTHÈSE] écart-type relatif du prix estimé en DA
+  bruit_bc: 0.02                     # [HYPOTHÈSE] écart-type relatif courant du prix de BC
+  p_ecart_important: 0.04            # [HYPOTHÈSE] fiche : "de rares écarts importants"
+  ecart_important_min: 0.15
+  ecart_important_max: 0.50
+  p_ecart_important_hausse: 0.65
+
+texte:
+  longueur_max: 40                   # [SOURCÉ-SAP] le champ désignation (TXZ01) fait 40 caractères
+  p_bruit_libre: 0.25                # [CHOIX] part des textes libres bruités (casse, abréviations, coquilles) : volontaire, pour l'étape de nettoyage
+  p_bruit_code: 0.03                 # [CHOIX] idem pour les articles à numéro
+
+# -----------------------------------------------------------------------------
+# FAMILLES D'ACHAT (14) : parts de dépense, références, fournisseurs = fiche d'identité
+# Les parts de lignes, les prix médians et les dispersions sont des [HYPOTHÈSE] de conception.
+# prix_median : prix par PEINH unités, en euros. La quantité médiane est CALCULÉE par le
+# générateur pour que la dépense de la famille atteigne sa cible (calage analytique).
+# -----------------------------------------------------------------------------
+familles:
+  # ------------------------------ ACHATS DIRECTS ------------------------------
+  - code: "100100"
+    nom: "Composants électroniques actifs"
+    type: direct
+    part_depense: 0.40            # [CHOIX, fiche] part de la dépense directe
+    nb_refs: 35
+    nb_fournisseurs: 16
+    part_lignes: 0.20
+    part_mrp: 0.92
+    meins: PC
+    peinh: 1
+    prix_median: 3.5
+    sigma_prix_entre_refs: 0.9
+    sigma_qte: 0.9
+    sigma_poids_fournisseur: 0.9   # dispersion du poids des fournisseurs (plus haut = plus concentré)
+    avec_matnr: true
+    imputation_k: false
+    mtart: ROH
+    dismm: PD
+    nb_sources: {1: 0.55, 2: 0.30, 3: 0.15}   # [HYPOTHÈSE] "source unique fréquente" (fiche)
+    pays: {FR: 0.10, DE: 0.20, NL: 0.10, IT: 0.05, CN: 0.15, TW: 0.15, KR: 0.10, JP: 0.05, MY: 0.05, US: 0.05}
+    demandeurs: {production: 0.5, ingenierie: 0.3, qualite: 0.2}
+    ekgrp: P10
+    delai_souhaite_jours: 45
+    p_bc_sans_da: 0.01
+
+  - code: "100500"
+    nom: "Composants passifs"
+    type: direct
+    part_depense: 0.08
+    nb_refs: 60
+    nb_fournisseurs: 28
+    part_lignes: 0.22
+    part_mrp: 0.95
+    meins: PC
+    peinh: 1000                   # prix pour 1 000 pièces (fiche)
+    prix_median: 12.0
+    sigma_prix_entre_refs: 0.8
+    sigma_qte: 0.8
+    sigma_poids_fournisseur: 1.0
+    avec_matnr: true
+    imputation_k: false
+    mtart: ROH
+    dismm: PD
+    nb_sources: {1: 0.30, 2: 0.40, 3: 0.20, 4: 0.10}
+    pays: {FR: 0.20, DE: 0.20, IT: 0.10, ES: 0.10, CN: 0.25, TW: 0.10, MY: 0.05}
+    demandeurs: {production: 0.6, ingenierie: 0.2, qualite: 0.2}
+    ekgrp: P10
+    delai_souhaite_jours: 30
+    p_bc_sans_da: 0.01
+
+  - code: "100300"
+    nom: "Cartes électroniques et assemblage sous-traité"
+    type: direct
+    part_depense: 0.14
+    nb_refs: 12
+    nb_fournisseurs: 10
+    part_lignes: 0.06
+    part_mrp: 0.88
+    meins: PC
+    peinh: 1
+    prix_median: 18.0
+    sigma_prix_entre_refs: 0.5
+    sigma_qte: 0.7
+    sigma_poids_fournisseur: 0.9   # "peu de gros fournisseurs"
+    avec_matnr: true
+    imputation_k: false
+    mtart: ROH
+    dismm: PD
+    nb_sources: {1: 0.50, 2: 0.35, 3: 0.15}
+    pays: {FR: 0.40, DE: 0.20, ES: 0.10, IT: 0.10, CN: 0.10, MY: 0.10}
+    demandeurs: {production: 0.6, ingenierie: 0.4}
+    ekgrp: P10
+    delai_souhaite_jours: 40
+    p_bc_sans_da: 0.01
+
+  - code: "100200"
+    nom: "Pièces plastiques et résines"
+    type: direct
+    part_depense: 0.13
+    nb_refs: 25
+    nb_fournisseurs: 18
+    part_lignes: 0.14
+    part_mrp: 0.95
+    meins: KG
+    peinh: 1
+    prix_median: 3.2
+    sigma_prix_entre_refs: 0.6
+    sigma_qte: 0.8
+    sigma_poids_fournisseur: 1.0
+    avec_matnr: true
+    imputation_k: false
+    mtart: ROH
+    dismm: PD
+    nb_sources: {1: 0.30, 2: 0.40, 3: 0.20, 4: 0.10}
+    pays: {FR: 0.45, DE: 0.25, IT: 0.15, ES: 0.10, NL: 0.05}
+    demandeurs: {production: 0.7, qualite: 0.15, ingenierie: 0.15}
+    ekgrp: P10
+    delai_souhaite_jours: 21
+    p_bc_sans_da: 0.01
+
+  - code: "100400"
+    nom: "Connectique et câblage"
+    type: direct
+    part_depense: 0.15
+    nb_refs: 30
+    nb_fournisseurs: 24
+    part_lignes: 0.18
+    part_mrp: 0.92
+    meins: PC
+    peinh: 100                    # prix pour 100 pièces (fiche)
+    prix_median: 45.0
+    sigma_prix_entre_refs: 0.7
+    sigma_qte: 0.8
+    sigma_poids_fournisseur: 1.0
+    avec_matnr: true
+    imputation_k: false
+    mtart: ROH
+    dismm: PD
+    nb_sources: {1: 0.30, 2: 0.40, 3: 0.20, 4: 0.10}
+    pays: {FR: 0.30, DE: 0.25, IT: 0.10, ES: 0.10, CN: 0.15, TW: 0.10}
+    demandeurs: {production: 0.6, ingenierie: 0.25, qualite: 0.15}
+    ekgrp: P10
+    delai_souhaite_jours: 30
+    p_bc_sans_da: 0.01
+
+  - code: "100600"
+    nom: "Métaux, visserie et fixations"
+    type: direct
+    part_depense: 0.06
+    nb_refs: 30
+    nb_fournisseurs: 38
+    part_lignes: 0.12
+    part_mrp: 0.90
+    meins: KG
+    peinh: 1
+    prix_median: 4.5
+    sigma_prix_entre_refs: 0.7
+    sigma_qte: 0.9
+    sigma_poids_fournisseur: 1.1   # "beaucoup de fournisseurs, produits courants"
+    avec_matnr: true
+    imputation_k: false
+    mtart: ROH
+    dismm: PD
+    nb_sources: {1: 0.25, 2: 0.40, 3: 0.25, 4: 0.10}
+    pays: {FR: 0.55, DE: 0.20, IT: 0.10, ES: 0.10, PL: 0.05}
+    demandeurs: {production: 0.7, maintenance: 0.1, qualite: 0.2}
+    ekgrp: P10
+    delai_souhaite_jours: 14
+    p_bc_sans_da: 0.01
+
+  - code: "100700"
+    nom: "Emballages industriels"
+    type: direct
+    part_depense: 0.04
+    nb_refs: 16
+    nb_fournisseurs: 16
+    part_lignes: 0.08
+    part_mrp: 0.85
+    meins: PC
+    peinh: 1
+    prix_median: 0.9
+    sigma_prix_entre_refs: 0.6
+    sigma_qte: 0.8
+    sigma_poids_fournisseur: 0.9
+    avec_matnr: true
+    imputation_k: false
+    mtart: VERP
+    dismm: PD
+    nb_sources: {1: 0.30, 2: 0.40, 3: 0.20, 4: 0.10}
+    pays: {FR: 0.70, DE: 0.15, BE: 0.10, ES: 0.05}
+    demandeurs: {logistique: 0.7, production: 0.3}
+    ekgrp: P20
+    delai_souhaite_jours: 14
+    p_bc_sans_da: 0.01
+
+  # ----------------------------- ACHATS INDIRECTS -----------------------------
+  - code: "200100"
+    nom: "Investissements et équipements de production"
+    type: indirect
+    part_depense: 0.25            # [CHOIX, fiche] part de la dépense indirecte
+    nb_refs: 30
+    nb_fournisseurs: 35
+    part_lignes: 0.03
+    part_mrp: 0.0
+    meins: EA
+    peinh: 1
+    prix_median: 15000.0
+    sigma_prix_entre_refs: 1.0
+    sigma_qte: 0.4
+    sigma_poids_fournisseur: 1.0
+    avec_matnr: false             # texte libre, pas de numéro d'article
+    imputation_k: true
+    mtart: ""
+    dismm: ""
+    part_contrat: 0.0             # part des libellés achetés toujours au même fournisseur
+    pays: {FR: 0.60, DE: 0.25, IT: 0.10, US: 0.05}
+    demandeurs: {production: 0.4, maintenance: 0.3, ingenierie: 0.3}
+    ekgrp: P30
+    delai_souhaite_jours: 60
+    p_bc_sans_da: 0.03
+
+  - code: "200200"
+    nom: "Pièces de rechange, maintenance et outillage"
+    type: indirect
+    part_depense: 0.20
+    nb_refs: 150
+    nb_fournisseurs: 100
+    part_lignes: 0.40
+    part_mrp: 0.15
+    meins: PC
+    peinh: 1
+    prix_median: 35.0
+    sigma_prix_entre_refs: 1.1
+    sigma_qte: 0.9
+    sigma_poids_fournisseur: 1.3
+    avec_matnr: true
+    imputation_k: false
+    mtart: ERSA
+    dismm: VB
+    part_contrat: 0.10
+    pays: {FR: 0.80, DE: 0.10, IT: 0.05, ES: 0.05}
+    demandeurs: {maintenance: 0.8, production: 0.2}
+    ekgrp: P20
+    delai_souhaite_jours: 10
+    p_bc_sans_da: 0.06
+
+  - code: "200300"
+    nom: "Logistique et transport"
+    type: indirect
+    part_depense: 0.15
+    nb_refs: 15
+    nb_fournisseurs: 35
+    part_lignes: 0.12
+    part_mrp: 0.0
+    meins: EA
+    peinh: 1
+    prix_median: 900.0
+    sigma_prix_entre_refs: 0.9
+    sigma_qte: 0.5
+    sigma_poids_fournisseur: 1.2
+    avec_matnr: false
+    imputation_k: true
+    mtart: ""
+    dismm: ""
+    part_contrat: 0.35
+    pays: {FR: 0.60, DE: 0.15, ES: 0.10, BE: 0.10, NL: 0.05}
+    demandeurs: {logistique: 1.0}
+    ekgrp: P30
+    delai_souhaite_jours: 7
+    p_bc_sans_da: 0.15
+
+  - code: "300100"
+    nom: "Informatique (matériel, licences, services)"
+    type: indirect
+    part_depense: 0.15
+    nb_refs: 40
+    nb_fournisseurs: 45
+    part_lignes: 0.12
+    part_mrp: 0.0
+    meins: EA
+    peinh: 1
+    prix_median: 650.0
+    sigma_prix_entre_refs: 1.2
+    sigma_qte: 0.7
+    sigma_poids_fournisseur: 1.2
+    avec_matnr: false
+    imputation_k: true
+    mtart: ""
+    dismm: ""
+    part_contrat: 0.30
+    pays: {FR: 0.70, DE: 0.10, IE: 0.05, US: 0.10, NL: 0.05}
+    demandeurs: {informatique: 0.8, ingenierie: 0.2}
+    ekgrp: P30
+    delai_souhaite_jours: 20
+    p_bc_sans_da: 0.08
+
+  - code: "300200"
+    nom: "Services généraux (nettoyage, gardiennage, restauration)"
+    type: indirect
+    part_depense: 0.12
+    nb_refs: 20
+    nb_fournisseurs: 55
+    part_lignes: 0.10
+    part_mrp: 0.0
+    meins: MON
+    peinh: 1
+    prix_median: 1800.0
+    sigma_prix_entre_refs: 0.8
+    sigma_qte: 0.6
+    sigma_poids_fournisseur: 1.2
+    avec_matnr: false
+    imputation_k: true
+    mtart: ""
+    dismm: ""
+    part_contrat: 0.60            # contrats récurrents (fiche)
+    pays: {FR: 0.95, BE: 0.05}
+    demandeurs: {services_generaux: 0.8, maintenance: 0.2}
+    ekgrp: P30
+    delai_souhaite_jours: 15
+    p_bc_sans_da: 0.12
+
+  - code: "300300"
+    nom: "Services professionnels et formation"
+    type: indirect
+    part_depense: 0.08
+    nb_refs: 60
+    nb_fournisseurs: 120
+    part_lignes: 0.08
+    part_mrp: 0.0
+    meins: H
+    peinh: 1
+    prix_median: 95.0
+    sigma_prix_entre_refs: 0.5
+    sigma_qte: 1.0
+    sigma_poids_fournisseur: 1.4   # longue traîne
+    avec_matnr: false
+    imputation_k: true
+    mtart: ""
+    dismm: ""
+    part_contrat: 0.10
+    pays: {FR: 0.85, DE: 0.05, GB: 0.05, US: 0.05}
+    demandeurs: {ingenierie: 0.3, qualite: 0.2, informatique: 0.2, production: 0.15, services_generaux: 0.15}
+    ekgrp: P30
+    delai_souhaite_jours: 20
+    p_bc_sans_da: 0.14
+
+  - code: "300400"
+    nom: "Fournitures, équipements de protection et bureau"
+    type: indirect
+    part_depense: 0.05
+    nb_refs: 50
+    nb_fournisseurs: 80
+    part_lignes: 0.15
+    part_mrp: 0.0
+    meins: PC
+    peinh: 1
+    prix_median: 12.0
+    sigma_prix_entre_refs: 1.0
+    sigma_qte: 0.9
+    sigma_poids_fournisseur: 1.3
+    avec_matnr: true
+    imputation_k: true
+    mtart: HIBE
+    dismm: ND
+    part_contrat: 0.10
+    pays: {FR: 0.90, DE: 0.05, BE: 0.05}
+    demandeurs: {production: 0.25, maintenance: 0.15, logistique: 0.15, qualite: 0.1, informatique: 0.1, services_generaux: 0.15, ingenierie: 0.1}
+    ekgrp: P30
+    delai_souhaite_jours: 10
+    p_bc_sans_da: 0.08
+
+# =============================================================================
+# SEUILS DE VALIDATION : fixés AVANT la première simulation (voir en-tête)
+# Chaque contrôle est numéroté comme dans la fiche d'identité (V1 à V8) ;
+# V9 (saisonnalité) est l'ajout proposé lors du passage à 24 mois.
+# Les intervalles [min, max] sont des [HYPOTHÈSE] larges : motifs classiques des
+# données d'achats (Pareto, forte asymétrie), pas des mesures sur une entreprise réelle.
+# =============================================================================
+validation:
+  volumes:
+    lignes_bc_par_an: [10000, 20000]          # fiche
+    depense_annuelle_eur: [85000000, 115000000]   # ±15 % autour de 100 M€
+    part_directs_en_valeur: [0.55, 0.65]      # autour de 60 % (Sievo)
+    tolerance_depense_famille: 0.25           # écart relatif toléré entre dépense réalisée et cible, par famille
+  V1_concentration:
+    gini_depense: [0.60, 0.90]
+    part_top10: [0.20, 0.50]
+    part_top20pct: [0.60, 0.92]
+    part_max_fournisseur: [0.02, 0.12]
+  V2_fournisseurs_par_reference:
+    part_refs_au_moins_2: [0.40, 0.85]
+    part_refs_un_seul: [0.15, 0.60]
+    max_part_refs_par_fournisseur: 0.15       # aucun fournisseur ne couvre plus de 15 % des références directes
+    max_familles_par_fournisseur: 3
+  V3_nombre_fournisseurs:
+    actifs_par_annee: [500, 700]
+    depense_moyenne_eur: [120000, 200000]
+    ratio_mediane_moyenne_max: 0.60
+  V4_demandes_par_fournisseur:
+    gini_lignes_min: 0.45
+    part_lignes_top_decile_min: 0.25
+  V5_montants:
+    asymetrie_min: 2.0
+    ratio_moyenne_mediane_min: 1.8
+    # Benford : mesuré et commenté, sans seuil de réussite (fiche)
+  V6_conversion:
+    part_lignes_converties: [0.82, 0.95]
+    part_da_manuelles_rejetees: [0.03, 0.08]
+    part_bc_sans_da: [0.03, 0.10]
+    part_lignes_fractionnees: [0.01, 0.06]
+    seuil_liberee_sans_bc_jours: 45           # une DA libérée depuis plus de 45 jours sans BC est dite "libérée sans BC"
+  V9_saisonnalite:
+    correlation_min: 0.85                     # corrélation entre année 1 et année 2, mois par mois
+    ratio_aout_max: 0.75                      # volume d'août / volume moyen des autres mois
+  processus:
+    part_mrp_directs: [0.85, 0.95]            # fiche
+    part_mrp_indirects_max: 0.10              # fiche
+    delai_da_bc_mediane_jours_ouvres: [1, 8]
+    ecart_prix_abs_mediane_max: 0.08          # fiche : "autour de plus ou moins 5 %"
+    part_ecart_prix_important: [0.01, 0.08]   # écart > 20 %

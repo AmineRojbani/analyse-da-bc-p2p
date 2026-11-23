@@ -1,0 +1,25 @@
+{
+  "graine": 20261107,
+  "empreinte_parametres": "9bd3184ce24fac37f07ef0e76704c4a39606efe40e3c0514d5cb0b09bdbabecd",
+  "versions": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "lignes": {
+    "EBAN": 32000,
+    "EKKO": 26483,
+    "EKPO": 32046,
+    "LFA1": 620,
+    "MARA": 408,
+    "T023T": 14
+  },
+  "empreintes_csv": {
+    "EBAN": "f74c9cd1c792d1449e57fee9adeb6a2b27289ee74a3a377dfed1478fea409865",
+    "EKKO": "1912d0f31931ed479fd0068806453cf46557159f85d6bb57da115aa3c5c3f24d",
+    "EKPO": "afea5ecd20de292d8c8cabec87368a7c75deca3ab7797460ec7e6c1d68d00e95",
+    "LFA1": "e2823021c73fa612b3d42b4b0f856f8c323140841ec2cb0041601a814734da59",
+    "MARA": "017c328851ef8a1ae80e36408fd7783c6585c3c5f29f23808fbef2691348c47f",
+    "T023T": "a30e23ae0775f8599a9dfbcccc3bd4963a9f603989de2d03e24017060a4742df"
+  }
+}

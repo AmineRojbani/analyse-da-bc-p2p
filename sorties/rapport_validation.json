@@ -1,0 +1,374 @@
+[
+  {
+    "controle": "VOL1",
+    "libelle": "Lignes de BC par année (min des deux années)",
+    "valeur": 15214,
+    "regle": "[10000, 20000]",
+    "ok": true
+  },
+  {
+    "controle": "VOL2",
+    "libelle": "Dépense annuelle en euros (année 1 / année 2)",
+    "valeur": "101.0 M€ / 105.9 M€",
+    "regle": "85 à 115 M€ par an",
+    "ok": true
+  },
+  {
+    "controle": "VOL3",
+    "libelle": "Part des achats directs en valeur",
+    "valeur": 0.59,
+    "regle": "[0.55, 0.65]",
+    "ok": true
+  },
+  {
+    "controle": "VOL4",
+    "libelle": "Écart max dépense réalisée / cible par famille (famille 200100)",
+    "valeur": "+13.6%",
+    "regle": "±25%",
+    "ok": true
+  },
+  {
+    "controle": "V1.1a",
+    "libelle": "Année 1 : Gini de la dépense par fournisseur",
+    "valeur": 0.774,
+    "regle": "[0.6, 0.9]",
+    "ok": true
+  },
+  {
+    "controle": "V1.1b",
+    "libelle": "Année 1 : part des 10 premiers fournisseurs",
+    "valeur": 0.269,
+    "regle": "[0.2, 0.5]",
+    "ok": true
+  },
+  {
+    "controle": "V1.1c",
+    "libelle": "Année 1 : part des 20 % premiers fournisseurs",
+    "valeur": 0.814,
+    "regle": "[0.6, 0.92]",
+    "ok": true
+  },
+  {
+    "controle": "V1.1d",
+    "libelle": "Année 1 : part du premier fournisseur",
+    "valeur": 0.056,
+    "regle": "[0.02, 0.12]",
+    "ok": true
+  },
+  {
+    "controle": "V1.2a",
+    "libelle": "Année 2 : Gini de la dépense par fournisseur",
+    "valeur": 0.766,
+    "regle": "[0.6, 0.9]",
+    "ok": true
+  },
+  {
+    "controle": "V1.2b",
+    "libelle": "Année 2 : part des 10 premiers fournisseurs",
+    "valeur": 0.248,
+    "regle": "[0.2, 0.5]",
+    "ok": true
+  },
+  {
+    "controle": "V1.2c",
+    "libelle": "Année 2 : part des 20 % premiers fournisseurs",
+    "valeur": 0.809,
+    "regle": "[0.6, 0.92]",
+    "ok": true
+  },
+  {
+    "controle": "V1.2d",
+    "libelle": "Année 2 : part du premier fournisseur",
+    "valeur": 0.048,
+    "regle": "[0.02, 0.12]",
+    "ok": true
+  },
+  {
+    "controle": "V2.a",
+    "libelle": "Références directes achetées à au moins 2 fournisseurs",
+    "valeur": 0.692,
+    "regle": "[0.4, 0.85]",
+    "ok": true
+  },
+  {
+    "controle": "V2.b",
+    "libelle": "Références directes achetées à un seul fournisseur",
+    "valeur": 0.308,
+    "regle": "[0.15, 0.6]",
+    "ok": true
+  },
+  {
+    "controle": "V2.c",
+    "libelle": "Part max des références directes couvertes par un même fournisseur",
+    "valeur": 0.106,
+    "regle": "≤ 0.15",
+    "ok": true
+  },
+  {
+    "controle": "V2.d",
+    "libelle": "Nombre max de familles d'achat par fournisseur",
+    "valeur": 2,
+    "regle": "≤ 3",
+    "ok": true
+  },
+  {
+    "controle": "V3.1a",
+    "libelle": "Année 1 : fournisseurs actifs",
+    "valeur": 551,
+    "regle": "[500, 700]",
+    "ok": true
+  },
+  {
+    "controle": "V3.1b",
+    "libelle": "Année 1 : dépense moyenne par fournisseur (€)",
+    "valeur": 183218,
+    "regle": "[120000, 200000]",
+    "ok": true
+  },
+  {
+    "controle": "V3.1c",
+    "libelle": "Année 1 : médiane / moyenne de la dépense par fournisseur",
+    "valeur": 0.206,
+    "regle": "≤ 0.6",
+    "ok": true
+  },
+  {
+    "controle": "V3.2a",
+    "libelle": "Année 2 : fournisseurs actifs",
+    "valeur": 559,
+    "regle": "[500, 700]",
+    "ok": true
+  },
+  {
+    "controle": "V3.2b",
+    "libelle": "Année 2 : dépense moyenne par fournisseur (€)",
+    "valeur": 189393,
+    "regle": "[120000, 200000]",
+    "ok": true
+  },
+  {
+    "controle": "V3.2c",
+    "libelle": "Année 2 : médiane / moyenne de la dépense par fournisseur",
+    "valeur": 0.227,
+    "regle": "≤ 0.6",
+    "ok": true
+  },
+  {
+    "controle": "V4.a",
+    "libelle": "Gini du nombre de lignes de BC par fournisseur",
+    "valeur": 0.687,
+    "regle": "≥ 0.45",
+    "ok": true
+  },
+  {
+    "controle": "V4.b",
+    "libelle": "Part des lignes détenue par les 10 % premiers fournisseurs",
+    "valeur": 0.53,
+    "regle": "≥ 0.25",
+    "ok": true
+  },
+  {
+    "controle": "V4.c",
+    "libelle": "Montant médian d'une ligne : indirect < direct",
+    "valeur": "1407 € < 4283 €",
+    "regle": "indirect < direct",
+    "ok": true
+  },
+  {
+    "controle": "V5.a",
+    "libelle": "Asymétrie (skewness) des montants de ligne",
+    "valeur": 10.409,
+    "regle": "≥ 2.0",
+    "ok": true
+  },
+  {
+    "controle": "V5.b",
+    "libelle": "Moyenne / médiane des montants de ligne",
+    "valeur": 3.029,
+    "regle": "≥ 1.8",
+    "ok": true
+  },
+  {
+    "controle": "V5.c",
+    "libelle": "Benford MAD",
+    "valeur": 0.0032,
+    "regle": "mesuré et commenté",
+    "ok": true,
+    "commentaire": "conformité proche"
+  },
+  {
+    "controle": "V6.a",
+    "libelle": "Part des lignes de DA avec au moins un BC",
+    "valeur": 0.917,
+    "regle": "[0.82, 0.95], < 100 %",
+    "ok": true
+  },
+  {
+    "controle": "V6.b",
+    "libelle": "Part des DA manuelles rejetées",
+    "valeur": 0.056,
+    "regle": "[0.03, 0.08]",
+    "ok": true
+  },
+  {
+    "controle": "V6.c",
+    "libelle": "Part des lignes de BC créées sans DA",
+    "valeur": 0.059,
+    "regle": "[0.03, 0.1]",
+    "ok": true
+  },
+  {
+    "controle": "V6.d",
+    "libelle": "Part des lignes converties fractionnées en plusieurs BC",
+    "valeur": 0.028,
+    "regle": "[0.01, 0.06]",
+    "ok": true
+  },
+  {
+    "controle": "V6.e",
+    "libelle": "Lignes sans BC dont le statut analyste est cohérent avec la cause simulée",
+    "valeur": 1.0,
+    "regle": "≥ 0.99",
+    "ok": true
+  },
+  {
+    "controle": "V7.a",
+    "libelle": "BC daté avant la création de sa DA",
+    "valeur": 0,
+    "regle": "0",
+    "ok": true
+  },
+  {
+    "controle": "V7.b",
+    "libelle": "BC daté avant la libération de sa DA",
+    "valeur": 0,
+    "regle": "0",
+    "ok": true
+  },
+  {
+    "controle": "V7.c",
+    "libelle": "Quantité commandée supérieure à la quantité demandée",
+    "valeur": 0,
+    "regle": "0",
+    "ok": true
+  },
+  {
+    "controle": "V7.d",
+    "libelle": "EBAN.BSMNG différent de la somme des lignes de BC",
+    "valeur": 0,
+    "regle": "0",
+    "ok": true
+  },
+  {
+    "controle": "V7.e",
+    "libelle": "NETWR ≠ quantité × prix / unité de prix",
+    "valeur": 0,
+    "regle": "0",
+    "ok": true
+  },
+  {
+    "controle": "V7.f",
+    "libelle": "Clés en double (EBAN, EKPO, EKKO, LFA1)",
+    "valeur": 0,
+    "regle": "0",
+    "ok": true
+  },
+  {
+    "controle": "V7.g",
+    "libelle": "Références orphelines (BC sans en-tête, fournisseur, famille, article, DA)",
+    "valeur": 0,
+    "regle": "0",
+    "ok": true
+  },
+  {
+    "controle": "V7.h",
+    "libelle": "EBAN.EBELN/EBELP pointe vers un poste qui ne vient pas de cette DA",
+    "valeur": 0,
+    "regle": "0",
+    "ok": true
+  },
+  {
+    "controle": "V7.i",
+    "libelle": "Dates un week-end ou un jour férié (création, libération, BC)",
+    "valeur": 0,
+    "regle": "0",
+    "ok": true
+  },
+  {
+    "controle": "V7.j",
+    "libelle": "Dates en dehors de la période d'extraction",
+    "valeur": 0,
+    "regle": "0",
+    "ok": true
+  },
+  {
+    "controle": "V7.k",
+    "libelle": "Devises inattendues sur les BC",
+    "valeur": 0,
+    "regle": "0",
+    "ok": true
+  },
+  {
+    "controle": "V9.a",
+    "libelle": "Corrélation mois par mois entre l'année 1 et l'année 2",
+    "valeur": 0.94,
+    "regle": "≥ 0.85",
+    "ok": true
+  },
+  {
+    "controle": "V9.b",
+    "libelle": "Volume d'août / volume moyen des autres mois",
+    "valeur": 0.488,
+    "regle": "≤ 0.75",
+    "ok": true
+  },
+  {
+    "controle": "P1",
+    "libelle": "Part des lignes de DA créées par le MRP : directs",
+    "valeur": 0.917,
+    "regle": "[0.85, 0.95]",
+    "ok": true
+  },
+  {
+    "controle": "P2",
+    "libelle": "Part des lignes de DA créées par le MRP : indirects",
+    "valeur": 0.061,
+    "regle": "≤ 0.1",
+    "ok": true
+  },
+  {
+    "controle": "P3",
+    "libelle": "Délai d'approbation médian (jours ouvrés) S1 < S2 < S3",
+    "valeur": "1.0 < 3.0 < 5.0",
+    "regle": "croissant avec le palier",
+    "ok": true
+  },
+  {
+    "controle": "P4",
+    "libelle": "Délai médian libération (ou création MRP) -> dernier BC, jours ouvrés",
+    "valeur": 4.0,
+    "regle": "[1, 8]",
+    "ok": true
+  },
+  {
+    "controle": "P5",
+    "libelle": "Écart de prix DA/BC : médiane de la valeur absolue",
+    "valeur": 0.038,
+    "regle": "≤ 0.08",
+    "ok": true
+  },
+  {
+    "controle": "P6",
+    "libelle": "Part des lignes avec un écart de prix DA/BC supérieur à 20 %",
+    "valeur": 0.034,
+    "regle": "[0.01, 0.08]",
+    "ok": true
+  },
+  {
+    "controle": "V8",
+    "libelle": "Empreintes SHA-256 des 6 fichiers identiques après relance",
+    "valeur": "6/6",
+    "regle": "6/6",
+    "ok": true
+  }
+]

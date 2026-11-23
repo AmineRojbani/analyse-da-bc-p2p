@@ -1,0 +1,45 @@
+SELECT 'EKPO sans en-tête EKKO' AS controle, COUNT(*) AS nb_lignes
+FROM v_ekpo p
+LEFT JOIN v_ekko k ON p.EBELN = k.EBELN
+WHERE k.EBELN IS NULL
+UNION ALL
+
+SELECT 'EKKO sans aucune ligne EKPO', COUNT(*)
+FROM v_ekko k
+LEFT JOIN v_ekpo p ON k.EBELN = p.EBELN
+WHERE p.EBELN IS NULL
+UNION ALL
+
+SELECT 'EKPO sans demande rattachée (BANFN vide)', COUNT(*)
+FROM v_ekpo
+WHERE BANFN IS NULL
+UNION ALL
+
+SELECT 'EKPO avec BANFN absent de EBAN', COUNT(*)
+FROM v_ekpo p
+LEFT JOIN v_eban e ON p.BANFN = e.BANFN AND p.BNFPO = e.BNFPO
+WHERE p.BANFN IS NOT NULL AND e.BANFN IS NULL
+UNION ALL
+
+SELECT 'EBAN avec EBELN absent de EKKO', COUNT(*)
+FROM v_eban e
+LEFT JOIN v_ekko k ON e.EBELN = k.EBELN
+WHERE e.EBELN IS NOT NULL AND k.EBELN IS NULL
+UNION ALL
+
+SELECT 'EKKO avec fournisseur absent de LFA1', COUNT(*)
+FROM v_ekko k
+LEFT JOIN v_lfa1 f ON k.LIFNR = f.LIFNR
+WHERE k.LIFNR IS NOT NULL AND f.LIFNR IS NULL
+UNION ALL
+
+SELECT 'EKPO avec article absent de MARA', COUNT(*)
+FROM v_ekpo p
+LEFT JOIN v_mara m ON p.MATNR = m.MATNR
+WHERE p.MATNR IS NOT NULL AND m.MATNR IS NULL
+UNION ALL
+
+SELECT 'EKPO avec famille absente de T023T', COUNT(*)
+FROM v_ekpo p
+LEFT JOIN v_t023t t ON p.MATKL = t.MATKL
+WHERE p.MATKL IS NOT NULL AND t.MATKL IS NULL;

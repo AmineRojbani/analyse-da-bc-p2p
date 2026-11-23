@@ -1,0 +1,15 @@
+﻿MATKL;WGBEZ;TYPE_ACHAT
+100100;Composants électroniques actifs;direct
+100500;Composants passifs;direct
+100300;Cartes électroniques et assemblage sous-traité;direct
+100200;Pièces plastiques et résines;direct
+100400;Connectique et câblage;direct
+100600;Métaux, visserie et fixations;direct
+100700;Emballages industriels;direct
+200100;Investissements et équipements de production;indirect
+200200;Pièces de rechange, maintenance et outillage;indirect
+200300;Logistique et transport;indirect
+300100;Informatique (matériel, licences, services);indirect
+300200;Services généraux (nettoyage, gardiennage, restauration);indirect
+300300;Services professionnels et formation;indirect
+300400;Fournitures, équipements de protection et bureau;indirect

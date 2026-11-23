@@ -1,0 +1,621 @@
+﻿LIFNR;NAME1;LAND1;ORT01
+0000100001;Nanovolt Taipei Co., Ltd;TW;Taipei
+0000100002;Nanovolt Mulhouse SARL;FR;Mulhouse
+0000100003;Silicor Bologne S.p.A.;IT;Bologne
+0000100004;Sonatek Hsinchu Co., Ltd;TW;Hsinchu
+0000100005;Sonatek Shenzhen Co., Ltd;CN;Shenzhen
+0000100006;Nanovolt Incheon Co., Ltd;KR;Incheon
+0000100007;Silicor Munich GmbH;DE;Munich
+0000100008;Cirvane Incheon Co., Ltd;KR;Incheon
+0000100009;Piezor Suzhou Co., Ltd;CN;Suzhou
+0000100010;Cirvane Johor Sdn Bhd;MY;Johor
+0000100011;Altronic Grenoble SA;FR;Grenoble
+0000100012;Piezor Utrecht B.V.;NL;Utrecht
+0000100013;Nanovolt Eindhoven B.V.;NL;Eindhoven
+0000100014;Sonatek Incheon Co., Ltd;KR;Incheon
+0000100015;Cirvane Taipei Co., Ltd;TW;Taipei
+0000100016;Sonatek Rennes SARL;FR;Rennes
+0000100017;Faradex Dresde AG;DE;Dresde
+0000100018;Capavolt Taipei Co., Ltd;TW;Taipei
+0000100019;Ohmatec Suzhou Co., Ltd;CN;Suzhou
+0000100020;Microhm Munich AG;DE;Munich
+0000100021;Passivia Munich AG;DE;Munich
+0000100022;Passivia Mulhouse SA;FR;Mulhouse
+0000100023;Passivia Hanovre AG;DE;Hanovre
+0000100024;Microhm Hsinchu Co., Ltd;TW;Hsinchu
+0000100025;Faradex Shenzhen Co., Ltd;CN;Shenzhen
+0000100026;Ohmatec Toulouse SAS;FR;Toulouse
+0000100027;Capavolt Shanghai Co., Ltd;CN;Shanghai
+0000100028;Faradex Milan S.p.A.;IT;Milan
+0000100029;Passivia Valence S.L.;ES;Valence
+0000100030;Resistel Lyon SA;FR;Lyon
+0000100031;Faradex Industrie Shenzhen Co., Ltd;CN;Shenzhen
+0000100032;Faradex Europe Dresde AG;DE;Dresde
+0000100033;Resistel Hanovre GmbH;DE;Hanovre
+0000100034;Ohmatec Nuremberg GmbH;DE;Nuremberg
+0000100035;Faradex Hsinchu Co., Ltd;TW;Hsinchu
+0000100036;Microhm Nuremberg GmbH;DE;Nuremberg
+0000100037;Capavolt Nantes SA;FR;Nantes
+0000100038;Microhm Johor Sdn Bhd;MY;Johor
+0000100039;Ohmatec Saragosse S.A.;ES;Saragosse
+0000100040;Capavolt Suzhou Co., Ltd;CN;Suzhou
+0000100041;Microhm Solutions Nuremberg GmbH;DE;Nuremberg
+0000100042;Faradex Mulhouse SAS;FR;Mulhouse
+0000100043;Microhm Bologne S.p.A.;IT;Bologne
+0000100044;Ohmatec Barcelone S.L.;ES;Barcelone
+0000100045;Montelec Metz SAS;FR;Metz
+0000100046;Pcbonne Munich GmbH;DE;Munich
+0000100047;Electroform Hanovre AG;DE;Hanovre
+0000100048;Assemblis Suzhou Co., Ltd;CN;Suzhou
+0000100049;Assemblis Europe Suzhou Co., Ltd;CN;Suzhou
+0000100050;Cartelec Johor Sdn Bhd;MY;Johor
+0000100051;Assemblis Saragosse S.A.;ES;Saragosse
+0000100052;Assemblis Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000100053;Boardline Penang Sdn Bhd;MY;Penang
+0000100054;Electroform Grenoble SAS;FR;Grenoble
+0000100055;Thermoplast Eindhoven B.V.;NL;Eindhoven
+0000100056;Moulage Barcelone S.L.;ES;Barcelone
+0000100057;Moulage Industrie Barcelone S.L.;ES;Barcelone
+0000100058;Thermoplast Milan S.r.l.;IT;Milan
+0000100059;Resinova Dresde GmbH;DE;Dresde
+0000100060;Plastiform Barcelone S.L.;ES;Barcelone
+0000100061;Plastiform Utrecht B.V.;NL;Utrecht
+0000100062;Polymeris Nuremberg AG;DE;Nuremberg
+0000100063;Thermoplast Dresde AG;DE;Dresde
+0000100064;Moulage Mulhouse SAS;FR;Mulhouse
+0000100065;Thermoplast Lille SAS;FR;Lille
+0000100066;Resinova Grenoble SA;FR;Grenoble
+0000100067;Resinova Nantes SARL;FR;Nantes
+0000100068;Resinova Valence S.A.;ES;Valence
+0000100069;Moulage Lille SARL;FR;Lille
+0000100070;Injectis Munich AG;DE;Munich
+0000100071;Moulage International Barcelone S.L.;ES;Barcelone
+0000100072;Resinova Barcelone S.L.;ES;Barcelone
+0000100073;Fichelec Barcelone S.A.;ES;Barcelone
+0000100074;Fichelec Munich AG;DE;Munich
+0000100075;Liaison Stuttgart GmbH;DE;Stuttgart
+0000100076;Connexia Stuttgart GmbH;DE;Stuttgart
+0000100077;Fichelec Strasbourg SAS;FR;Strasbourg
+0000100078;Connexia Munich GmbH;DE;Munich
+0000100079;Connexia Shanghai Co., Ltd;CN;Shanghai
+0000100080;Fichelec Hanovre AG;DE;Hanovre
+0000100081;Liaison Lille SA;FR;Lille
+0000100082;Connectis Nuremberg AG;DE;Nuremberg
+0000100083;Liaison Milan S.r.l.;IT;Milan
+0000100084;Fichelec Hanovre GmbH;DE;Hanovre
+0000100085;Cablor Hanovre AG;DE;Hanovre
+0000100086;Connexia Metz SAS;FR;Metz
+0000100087;Connexia Hsinchu Co., Ltd;TW;Hsinchu
+0000100088;Faisceaux Strasbourg SA;FR;Strasbourg
+0000100089;Connectis Systèmes Nuremberg AG;DE;Nuremberg
+0000100090;Cablor Saragosse S.L.;ES;Saragosse
+0000100091;Liaison Lyon SA;FR;Lyon
+0000100092;Fichelec Lille SARL;FR;Lille
+0000100093;Connectis Munich GmbH;DE;Munich
+0000100094;Liaison Lille SAS;FR;Lille
+0000100095;Fichelec Valence S.L.;ES;Valence
+0000100096;Faisceaux Saragosse S.L.;ES;Saragosse
+0000100097;Boulonnerie Barcelone S.A.;ES;Barcelone
+0000100098;Visserie Nantes SAS;FR;Nantes
+0000100099;Metalor Valence S.A.;ES;Valence
+0000100100;Boulonnerie Stuttgart AG;DE;Stuttgart
+0000100101;Metalor Nantes SA;FR;Nantes
+0000100102;Metalor Mulhouse SA;FR;Mulhouse
+0000100103;Aciers Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000100104;Metalor Saragosse S.A.;ES;Saragosse
+0000100105;Fixa Nantes SARL;FR;Nantes
+0000100106;Forgeron Grenoble SAS;FR;Grenoble
+0000100107;Fixa Katowice Sp. z o.o.;PL;Katowice
+0000100108;Forgeron Mulhouse SA;FR;Mulhouse
+0000100109;Aciers Toulouse SARL;FR;Toulouse
+0000100110;Visserie Munich GmbH;DE;Munich
+0000100111;Fixa Lyon SAS;FR;Lyon
+0000100112;Fixa Dresde AG;DE;Dresde
+0000100113;Metalor Services Mulhouse SA;FR;Mulhouse
+0000100114;Boulonnerie Solutions Stuttgart AG;DE;Stuttgart
+0000100115;Metalor Lyon SA;FR;Lyon
+0000100116;Metalor Katowice Sp. z o.o.;PL;Katowice
+0000100117;Metalor Turin S.p.A.;IT;Turin
+0000100118;Aciers Metz SAS;FR;Metz
+0000100119;Aciers Strasbourg SARL;FR;Strasbourg
+0000100120;Aciers Valence S.A.;ES;Valence
+0000100121;Aciers Bologne S.r.l.;IT;Bologne
+0000100122;Fixa Rennes SA;FR;Rennes
+0000100123;Boulonnerie Europe Stuttgart AG;DE;Stuttgart
+0000100124;Aciers Nuremberg GmbH;DE;Nuremberg
+0000100125;Forgeron Nantes SA;FR;Nantes
+0000100126;Metalor Munich GmbH;DE;Munich
+0000100127;Visserie Toulouse SA;FR;Toulouse
+0000100128;Boulonnerie Lille SA;FR;Lille
+0000100129;Boulonnerie Rennes SA;FR;Rennes
+0000100130;Aciers Stuttgart GmbH;DE;Stuttgart
+0000100131;Visserie Munich AG;DE;Munich
+0000100132;Visserie Katowice Sp. z o.o.;PL;Katowice
+0000100133;Visserie Turin S.p.A.;IT;Turin
+0000100134;Boulonnerie Metz SA;FR;Metz
+0000100135;Caisserie Grenoble SAS;FR;Grenoble
+0000100136;Conditionnement Mulhouse SARL;FR;Mulhouse
+0000100137;Cartonnage Rennes SAS;FR;Rennes
+0000100138;Conditionnement Toulouse SA;FR;Toulouse
+0000100139;Conditionnement Stuttgart AG;DE;Stuttgart
+0000100140;Caisserie Toulouse SAS;FR;Toulouse
+0000100141;Palettis Saragosse S.L.;ES;Saragosse
+0000100142;Packo Stuttgart AG;DE;Stuttgart
+0000100143;Conditionnement Rennes SARL;FR;Rennes
+0000100144;Palettis Nantes SARL;FR;Nantes
+0000100145;Cartonnage Stuttgart GmbH;DE;Stuttgart
+0000100146;Conditionnement Rennes SAS;FR;Rennes
+0000100147;Palettis Lille SA;FR;Lille
+0000100148;Palettis Industrie Nantes SARL;FR;Nantes
+0000100149;Packo Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000100150;Palettis Nantes SAS;FR;Nantes
+0000200001;Indusmat Turin S.p.A.;IT;Turin
+0000200002;Lignepro Mulhouse SARL;FR;Mulhouse
+0000200003;Indusmat Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000200004;Machina Rennes SARL;FR;Rennes
+0000200005;Indusmat Austin Inc.;US;Austin
+0000200006;Equipro Grenoble SARL;FR;Grenoble
+0000200007;Equipro Munich GmbH;DE;Munich
+0000200008;Indusmat Lyon SA;FR;Lyon
+0000200009;Indusmat Mulhouse SARL;FR;Mulhouse
+0000200010;Machina Grenoble SARL;FR;Grenoble
+0000200011;Outilmatic Stuttgart AG;DE;Stuttgart
+0000200012;Machina Milan S.r.l.;IT;Milan
+0000200013;Automatis Dresde GmbH;DE;Dresde
+0000200014;Automatis Munich AG;DE;Munich
+0000200015;Lignepro Rennes SA;FR;Rennes
+0000200016;Lignepro Bologne S.p.A.;IT;Bologne
+0000200017;Machina Nantes SARL;FR;Nantes
+0000200018;Lignepro Austin Inc.;US;Austin
+0000200019;Automatis Milan S.p.A.;IT;Milan
+0000200020;Equipro Strasbourg SAS;FR;Strasbourg
+0000200021;Outilmatic Toulouse SAS;FR;Toulouse
+0000200022;Machina Rennes SAS;FR;Rennes
+0000200023;Automatis Strasbourg SARL;FR;Strasbourg
+0000200024;Lignepro Rennes SARL;FR;Rennes
+0000200025;Lignepro Grenoble SA;FR;Grenoble
+0000200026;Automatis Nuremberg GmbH;DE;Nuremberg
+0000200027;Automatis Grenoble SARL;FR;Grenoble
+0000200028;Outilmatic Rennes SA;FR;Rennes
+0000200029;Equipro Dresde AG;DE;Dresde
+0000200030;Outilmatic Mulhouse SARL;FR;Mulhouse
+0000200031;Machina Nantes SA;FR;Nantes
+0000200032;Machina Metz SAS;FR;Metz
+0000200033;Automatis Industrie Strasbourg SARL;FR;Strasbourg
+0000200034;Automatis Rennes SAS;FR;Rennes
+0000200035;Equipro Nuremberg AG;DE;Nuremberg
+0000200036;Roulements Nantes SA;FR;Nantes
+0000200037;Roulements Nuremberg GmbH;DE;Nuremberg
+0000200038;Piececo Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200039;Maintex Toulouse SAS;FR;Toulouse
+0000200040;Mecatec Lyon SA;FR;Lyon
+0000200041;Rechange Mulhouse SA;FR;Mulhouse
+0000200042;Mecatec Lille SAS;FR;Lille
+0000200043;Mecatec Solutions Lyon SA;FR;Lyon
+0000200044;Outillage Lille SARL;FR;Lille
+0000200045;Piececo Hanovre GmbH;DE;Hanovre
+0000200046;Roulements Lyon SARL;FR;Lyon
+0000200047;Piececo Lille SA;FR;Lille
+0000200048;Outillage Valence S.A.;ES;Valence
+0000200049;Roulements Bologne S.p.A.;IT;Bologne
+0000200050;Outillage Toulouse SARL;FR;Toulouse
+0000200051;Piececo Milan S.r.l.;IT;Milan
+0000200052;Roulements Nantes SARL;FR;Nantes
+0000200053;Rechange Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000200054;Maintex Nantes SARL;FR;Nantes
+0000200055;Piececo Nantes SA;FR;Nantes
+0000200056;Piececo Mulhouse SA;FR;Mulhouse
+0000200057;Rechange Lille SA;FR;Lille
+0000200058;Maintex Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200059;Roulements Toulouse SARL;FR;Toulouse
+0000200060;Outillage Lille SA;FR;Lille
+0000200061;Rechange Lille SAS;FR;Lille
+0000200062;Outillage Mulhouse SA;FR;Mulhouse
+0000200063;Rechange Strasbourg SARL;FR;Strasbourg
+0000200064;Mecatec Nantes SA;FR;Nantes
+0000200065;Outillage Saragosse S.L.;ES;Saragosse
+0000200066;Mecatec Saragosse S.A.;ES;Saragosse
+0000200067;Maintex Toulouse SARL;FR;Toulouse
+0000200068;Rechange Toulouse SAS;FR;Toulouse
+0000200069;Roulements Rennes SARL;FR;Rennes
+0000200070;Roulements Mulhouse SARL;FR;Mulhouse
+0000200071;Piececo Turin S.r.l.;IT;Turin
+0000200072;Maintex Mulhouse SAS;FR;Mulhouse
+0000200073;Maintex Strasbourg SA;FR;Strasbourg
+0000200074;Outillage Barcelone S.A.;ES;Barcelone
+0000200075;Rechange Strasbourg SAS;FR;Strasbourg
+0000200076;Roulements Industrie Mulhouse SARL;FR;Mulhouse
+0000200077;Maintex Services Mulhouse SAS;FR;Mulhouse
+0000200078;Rechange Milan S.r.l.;IT;Milan
+0000200079;Outillage Strasbourg SA;FR;Strasbourg
+0000200080;Piececo Rennes SARL;FR;Rennes
+0000200081;Roulements Lyon SA;FR;Lyon
+0000200082;Roulements Grenoble SAS;FR;Grenoble
+0000200083;Maintex Industrie Toulouse SAS;FR;Toulouse
+0000200084;Outillage Lille SAS;FR;Lille
+0000200085;Roulements Mulhouse SA;FR;Mulhouse
+0000200086;Roulements Services Rennes SARL;FR;Rennes
+0000200087;Rechange Lille SARL;FR;Lille
+0000200088;Maintex Hanovre GmbH;DE;Hanovre
+0000200089;Maintex Mulhouse SA;FR;Mulhouse
+0000200090;Mecatec Strasbourg SA;FR;Strasbourg
+0000200091;Mecatec Technologies Lyon SA;FR;Lyon
+0000200092;Piececo Toulouse SAS;FR;Toulouse
+0000200093;Mecatec Nantes SAS;FR;Nantes
+0000200094;Mecatec Lyon SARL;FR;Lyon
+0000200095;Outillage Rennes SARL;FR;Rennes
+0000200096;Rechange Hanovre AG;DE;Hanovre
+0000200097;Outillage Metz SA;FR;Metz
+0000200098;Maintex Europe Nantes SARL;FR;Nantes
+0000200099;Outillage Toulouse SA;FR;Toulouse
+0000200100;Mecatec Services Nantes SA;FR;Nantes
+0000200101;Outillage Rennes SA;FR;Rennes
+0000200102;Rechange Mulhouse SAS;FR;Mulhouse
+0000200103;Maintex Europe Mulhouse SA;FR;Mulhouse
+0000200104;Outillage Bologne S.p.A.;IT;Bologne
+0000200105;Piececo Solutions Mulhouse SA;FR;Mulhouse
+0000200106;Roulements Lyon SAS;FR;Lyon
+0000200107;Piececo Metz SARL;FR;Metz
+0000200108;Rechange Dresde AG;DE;Dresde
+0000200109;Piececo Metz SAS;FR;Metz
+0000200110;Roulements Solutions Lyon SAS;FR;Lyon
+0000200111;Maintex Metz SARL;FR;Metz
+0000200112;Maintex Strasbourg SARL;FR;Strasbourg
+0000200113;Outillage Strasbourg SAS;FR;Strasbourg
+0000200114;Maintex Lyon SAS;FR;Lyon
+0000200115;Piececo International Turin S.r.l.;IT;Turin
+0000200116;Maintex Groupe Toulouse SAS;FR;Toulouse
+0000200117;Outillage Systèmes Barcelone S.A.;ES;Barcelone
+0000200118;Maintex Nantes SA;FR;Nantes
+0000200119;Mecatec Barcelone S.L.;ES;Barcelone
+0000200120;Rechange Rennes SAS;FR;Rennes
+0000200121;Outillage Mulhouse SAS;FR;Mulhouse
+0000200122;Roulements Mulhouse SAS;FR;Mulhouse
+0000200123;Mecatec Toulouse SARL;FR;Toulouse
+0000200124;Piececo Mulhouse SARL;FR;Mulhouse
+0000200125;Piececo Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000200126;Maintex Rennes SAS;FR;Rennes
+0000200127;Maintex Bologne S.p.A.;IT;Bologne
+0000200128;Roulements Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200129;Mecatec Metz SARL;FR;Metz
+0000200130;Rechange Metz SARL;FR;Metz
+0000200131;Mecatec Toulouse SAS;FR;Toulouse
+0000200132;Roulements Groupe Nantes SA;FR;Nantes
+0000200133;Maintex Milan S.r.l.;IT;Milan
+0000200134;Roulements Solutions Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200135;Piececo Bologne S.r.l.;IT;Bologne
+0000200136;Cargo Metz SARL;FR;Metz
+0000200137;Logiflux Rennes SAS;FR;Rennes
+0000200138;Routier Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200139;Affretex Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200140;Logiflux Toulouse SAS;FR;Toulouse
+0000200141;Transvia Strasbourg SARL;FR;Strasbourg
+0000200142;Logiflux Lille SA;FR;Lille
+0000200143;Cargo Lyon SAS;FR;Lyon
+0000200144;Logiflux Metz SARL;FR;Metz
+0000200145;Logiflux Strasbourg SA;FR;Strasbourg
+0000200146;Logiflux Nuremberg AG;DE;Nuremberg
+0000200147;Expedis Metz SAS;FR;Metz
+0000200148;Affretex Hanovre GmbH;DE;Hanovre
+0000200149;Logiflux Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000200150;Cargo Saragosse S.L.;ES;Saragosse
+0000200151;Affretex Rennes SA;FR;Rennes
+0000200152;Expedis Munich AG;DE;Munich
+0000200153;Routier Rotterdam B.V.;NL;Rotterdam
+0000200154;Transvia Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000200155;Affretex Valence S.A.;ES;Valence
+0000200156;Expedis Groupe Munich AG;DE;Munich
+0000200157;Transvia Lille SARL;FR;Lille
+0000200158;Expedis Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200159;Affretex Lille SAS;FR;Lille
+0000200160;Routier Hanovre AG;DE;Hanovre
+0000200161;Affretex Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200162;Expedis Anvers SRL;BE;Anvers
+0000200163;Affretex Mulhouse SAS;FR;Mulhouse
+0000200164;Cargo Anvers SA;BE;Anvers
+0000200165;Transvia Nuremberg GmbH;DE;Nuremberg
+0000200166;Cargo Metz SAS;FR;Metz
+0000200167;Expedis Lyon SARL;FR;Lyon
+0000200168;Routier Liège SA;BE;Liège
+0000200169;Affretex Rennes SARL;FR;Rennes
+0000200170;Logiflux Lyon SARL;FR;Lyon
+0000200171;Logiciel Strasbourg SAS;FR;Strasbourg
+0000200172;Logiciel Lyon SA;FR;Lyon
+0000200173;Bureautis Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000200174;Datalis Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200175;Logiciel Rennes SARL;FR;Rennes
+0000200176;Bureautis Solutions Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000200177;Cloudia Lille SA;FR;Lille
+0000200178;Bureautis Rotterdam B.V.;NL;Rotterdam
+0000200179;Cloudia Lille SAS;FR;Lille
+0000200180;Datalis Toulouse SA;FR;Toulouse
+0000200181;Cloudia Rennes SAS;FR;Rennes
+0000200182;Bureautis Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200183;Infosys Cork Ltd;IE;Cork
+0000200184;Datalis Hanovre AG;DE;Hanovre
+0000200185;Bureautis Metz SA;FR;Metz
+0000200186;Netservice Phoenix Inc.;US;Phoenix
+0000200187;Datalis Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200188;Cloudia Lyon SA;FR;Lyon
+0000200189;Netservice Toulouse SA;FR;Toulouse
+0000200190;Bureautis Lille SA;FR;Lille
+0000200191;Netservice Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200192;Cloudia Nantes SAS;FR;Nantes
+0000200193;Datalis Metz SA;FR;Metz
+0000200194;Logiciel Lille SARL;FR;Lille
+0000200195;Netservice Rennes SAS;FR;Rennes
+0000200196;Cloudia Lyon SAS;FR;Lyon
+0000200197;Cloudia Industrie Lille SAS;FR;Lille
+0000200198;Datalis Nantes SARL;FR;Nantes
+0000200199;Cloudia Toulouse SARL;FR;Toulouse
+0000200200;Cloudia Toulouse SAS;FR;Toulouse
+0000200201;Datalis Austin Inc.;US;Austin
+0000200202;Bureautis Lyon SAS;FR;Lyon
+0000200203;Bureautis Rennes SARL;FR;Rennes
+0000200204;Infosys Stuttgart AG;DE;Stuttgart
+0000200205;Logiciel Lyon SAS;FR;Lyon
+0000200206;Netservice Dublin Ltd;IE;Dublin
+0000200207;Infosys Eindhoven B.V.;NL;Eindhoven
+0000200208;Datalis Toulouse SAS;FR;Toulouse
+0000200209;Infosys Metz SARL;FR;Metz
+0000200210;Infosys Toulouse SA;FR;Toulouse
+0000200211;Datalis Industrie Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200212;Bureautis Munich AG;DE;Munich
+0000200213;Infosys Toulouse SAS;FR;Toulouse
+0000200214;Datalis Strasbourg SARL;FR;Strasbourg
+0000200215;Netservice Services Toulouse SA;FR;Toulouse
+0000200216;Surveillis Rennes SAS;FR;Rennes
+0000200217;Gardia Rennes SARL;FR;Rennes
+0000200218;Servigen Metz SAS;FR;Metz
+0000200219;Surveillis Nantes SARL;FR;Nantes
+0000200220;Servigen Toulouse SAS;FR;Toulouse
+0000200221;Entretien Toulouse SA;FR;Toulouse
+0000200222;Proprelec Toulouse SARL;FR;Toulouse
+0000200223;Gardia Metz SAS;FR;Metz
+0000200224;Restauris Rennes SARL;FR;Rennes
+0000200225;Restauris Toulouse SARL;FR;Toulouse
+0000200226;Proprelec Lyon SARL;FR;Lyon
+0000200227;Restauris Lille SARL;FR;Lille
+0000200228;Servigen Services Metz SAS;FR;Metz
+0000200229;Entretien Lyon SA;FR;Lyon
+0000200230;Proprelec Grenoble SARL;FR;Grenoble
+0000200231;Entretien Mulhouse SA;FR;Mulhouse
+0000200232;Surveillis Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200233;Entretien Rennes SAS;FR;Rennes
+0000200234;Servigen Lyon SAS;FR;Lyon
+0000200235;Gardia Lille SA;FR;Lille
+0000200236;Entretien Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200237;Entretien Lille SARL;FR;Lille
+0000200238;Gardia Rennes SA;FR;Rennes
+0000200239;Proprelec International Grenoble SARL;FR;Grenoble
+0000200240;Proprelec Toulouse SA;FR;Toulouse
+0000200241;Entretien Toulouse SAS;FR;Toulouse
+0000200242;Gardia Strasbourg SARL;FR;Strasbourg
+0000200243;Restauris Strasbourg SARL;FR;Strasbourg
+0000200244;Restauris Grenoble SAS;FR;Grenoble
+0000200245;Entretien Mulhouse SAS;FR;Mulhouse
+0000200246;Servigen Toulouse SARL;FR;Toulouse
+0000200247;Entretien Nantes SA;FR;Nantes
+0000200248;Proprelec Anvers SRL;BE;Anvers
+0000200249;Proprelec Services Lyon SARL;FR;Lyon
+0000200250;Servigen Rennes SA;FR;Rennes
+0000200251;Entretien Metz SAS;FR;Metz
+0000200252;Entretien Services Mulhouse SAS;FR;Mulhouse
+0000200253;Entretien Rennes SA;FR;Rennes
+0000200254;Gardia Rennes SAS;FR;Rennes
+0000200255;Surveillis Rennes SA;FR;Rennes
+0000200256;Restauris Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200257;Proprelec Europe Lyon SARL;FR;Lyon
+0000200258;Surveillis International Rennes SA;FR;Rennes
+0000200259;Proprelec Strasbourg SARL;FR;Strasbourg
+0000200260;Surveillis Europe Rennes SA;FR;Rennes
+0000200261;Gardia Lille SARL;FR;Lille
+0000200262;Proprelec Lyon SA;FR;Lyon
+0000200263;Servigen Rennes SAS;FR;Rennes
+0000200264;Entretien Systèmes Metz SAS;FR;Metz
+0000200265;Servigen Anvers SA;BE;Anvers
+0000200266;Restauris Rennes SA;FR;Rennes
+0000200267;Servigen Solutions Toulouse SAS;FR;Toulouse
+0000200268;Servigen Rennes SARL;FR;Rennes
+0000200269;Restauris Industrie Strasbourg SARL;FR;Strasbourg
+0000200270;Surveillis Strasbourg SAS;FR;Strasbourg
+0000200271;Audit Strasbourg SA;FR;Strasbourg
+0000200272;Conseilis Lille SAS;FR;Lille
+0000200273;Conseilis Coventry Ltd;GB;Coventry
+0000200274;Competence Metz SARL;FR;Metz
+0000200275;Strategis Phoenix Inc.;US;Phoenix
+0000200276;Audit Metz SAS;FR;Metz
+0000200277;Expertis Strasbourg SAS;FR;Strasbourg
+0000200278;Competence Toulouse SAS;FR;Toulouse
+0000200279;Audit Toulouse SA;FR;Toulouse
+0000200280;Formatec Metz SA;FR;Metz
+0000200281;Expertis Grenoble SA;FR;Grenoble
+0000200282;Strategis Toulouse SAS;FR;Toulouse
+0000200283;Expertis Strasbourg SARL;FR;Strasbourg
+0000200284;Formatec Stuttgart AG;DE;Stuttgart
+0000200285;Formatec Metz SAS;FR;Metz
+0000200286;Strategis Rennes SA;FR;Rennes
+0000200287;Audit Grenoble SAS;FR;Grenoble
+0000200288;Conseilis Metz SARL;FR;Metz
+0000200289;Audit Strasbourg SAS;FR;Strasbourg
+0000200290;Expertis Coventry Ltd;GB;Coventry
+0000200291;Competence Nuremberg AG;DE;Nuremberg
+0000200292;Conseilis Strasbourg SARL;FR;Strasbourg
+0000200293;Formatec Solutions Metz SAS;FR;Metz
+0000200294;Conseilis Strasbourg SA;FR;Strasbourg
+0000200295;Audit Nantes SA;FR;Nantes
+0000200296;Audit Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000200297;Audit Grenoble SA;FR;Grenoble
+0000200298;Conseilis Services Strasbourg SARL;FR;Strasbourg
+0000200299;Audit Metz SARL;FR;Metz
+0000200300;Expertis Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200301;Conseilis Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200302;Audit Metz SA;FR;Metz
+0000200303;Conseilis Austin Inc.;US;Austin
+0000200304;Strategis Metz SAS;FR;Metz
+0000200305;Conseilis Solutions Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200306;Formatec Mulhouse SA;FR;Mulhouse
+0000200307;Strategis Leeds Ltd;GB;Leeds
+0000200308;Strategis Nantes SAS;FR;Nantes
+0000200309;Audit Mulhouse SARL;FR;Mulhouse
+0000200310;Conseilis Lille SARL;FR;Lille
+0000200311;Audit Systèmes Mulhouse SARL;FR;Mulhouse
+0000200312;Competence Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200313;Competence Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200314;Expertis Hanovre GmbH;DE;Hanovre
+0000200315;Audit Mulhouse SAS;FR;Mulhouse
+0000200316;Audit Technologies Metz SARL;FR;Metz
+0000200317;Strategis International Metz SAS;FR;Metz
+0000200318;Formatec Mulhouse SARL;FR;Mulhouse
+0000200319;Expertis Lyon SA;FR;Lyon
+0000200320;Competence Lyon SAS;FR;Lyon
+0000200321;Conseilis Mulhouse SARL;FR;Mulhouse
+0000200322;Strategis Metz SARL;FR;Metz
+0000200323;Conseilis Lille SA;FR;Lille
+0000200324;Strategis Mulhouse SAS;FR;Mulhouse
+0000200325;Strategis Toulouse SA;FR;Toulouse
+0000200326;Strategis Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000200327;Conseilis Lyon SAS;FR;Lyon
+0000200328;Formatec Strasbourg SA;FR;Strasbourg
+0000200329;Formatec Toulouse SA;FR;Toulouse
+0000200330;Expertis Lille SA;FR;Lille
+0000200331;Strategis Lyon SAS;FR;Lyon
+0000200332;Formatec Metz SARL;FR;Metz
+0000200333;Formatec Grenoble SA;FR;Grenoble
+0000200334;Expertis Nantes SARL;FR;Nantes
+0000200335;Conseilis Lyon SA;FR;Lyon
+0000200336;Strategis Industrie Phoenix Inc.;US;Phoenix
+0000200337;Expertis Metz SAS;FR;Metz
+0000200338;Formatec Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200339;Conseilis Europe Lille SAS;FR;Lille
+0000200340;Strategis Austin Inc.;US;Austin
+0000200341;Expertis Solutions Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200342;Competence Strasbourg SAS;FR;Strasbourg
+0000200343;Strategis Lille SAS;FR;Lille
+0000200344;Formatec Services Toulouse SA;FR;Toulouse
+0000200345;Conseilis Grenoble SAS;FR;Grenoble
+0000200346;Expertis Mulhouse SAS;FR;Mulhouse
+0000200347;Competence Toulouse SARL;FR;Toulouse
+0000200348;Formatec Lyon SAS;FR;Lyon
+0000200349;Conseilis Technologies Metz SARL;FR;Metz
+0000200350;Formatec Strasbourg SARL;FR;Strasbourg
+0000200351;Competence Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000200352;Audit Technologies Strasbourg SAS;FR;Strasbourg
+0000200353;Conseilis Phoenix Inc.;US;Phoenix
+0000200354;Competence Strasbourg SA;FR;Strasbourg
+0000200355;Strategis Rennes SAS;FR;Rennes
+0000200356;Expertis Europe Coventry Ltd;GB;Coventry
+0000200357;Conseilis Solutions Strasbourg SA;FR;Strasbourg
+0000200358;Formatec Lyon SARL;FR;Lyon
+0000200359;Audit Systèmes Grenoble SA;FR;Grenoble
+0000200360;Audit Toulouse SAS;FR;Toulouse
+0000200361;Formatec Toulouse SARL;FR;Toulouse
+0000200362;Audit Systèmes Strasbourg SA;FR;Strasbourg
+0000200363;Competence Metz SA;FR;Metz
+0000200364;Formatec Services Lyon SAS;FR;Lyon
+0000200365;Formatec Grenoble SARL;FR;Grenoble
+0000200366;Formatec Nantes SAS;FR;Nantes
+0000200367;Expertis Nantes SAS;FR;Nantes
+0000200368;Formatec Lille SARL;FR;Lille
+0000200369;Conseilis Toulouse SA;FR;Toulouse
+0000200370;Conseilis Nantes SA;FR;Nantes
+0000200371;Competence Lille SA;FR;Lille
+0000200372;Expertis International Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200373;Audit Solutions Mulhouse SARL;FR;Mulhouse
+0000200374;Strategis Systèmes Leeds Ltd;GB;Leeds
+0000200375;Audit Phoenix Inc.;US;Phoenix
+0000200376;Strategis Lille SA;FR;Lille
+0000200377;Strategis Strasbourg SARL;FR;Strasbourg
+0000200378;Formatec Systèmes Metz SAS;FR;Metz
+0000200379;Formatec Strasbourg SAS;FR;Strasbourg
+0000200380;Expertis Munich AG;DE;Munich
+0000200381;Strategis Rennes SARL;FR;Rennes
+0000200382;Strategis Lille SARL;FR;Lille
+0000200383;Expertis Mulhouse SARL;FR;Mulhouse
+0000200384;Audit Strasbourg SARL;FR;Strasbourg
+0000200385;Audit Rennes SARL;FR;Rennes
+0000200386;Formatec Lille SAS;FR;Lille
+0000200387;Expertis Services Mulhouse SAS;FR;Mulhouse
+0000200388;Strategis Systèmes Lille SARL;FR;Lille
+0000200389;Competence Hanovre GmbH;DE;Hanovre
+0000200390;Strategis Coventry Ltd;GB;Coventry
+0000200391;Securis Lille SAS;FR;Lille
+0000200392;Papeteris Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000200393;Bureauplus Mulhouse SARL;FR;Mulhouse
+0000200394;Fournipro Mulhouse SA;FR;Mulhouse
+0000200395;Fournipro Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000200396;Fournipro Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200397;Securis Strasbourg SAS;FR;Strasbourg
+0000200398;Protectis Toulouse SAS;FR;Toulouse
+0000200399;Securis Toulouse SA;FR;Toulouse
+0000200400;Bureauplus Strasbourg SARL;FR;Strasbourg
+0000200401;Bureauplus Toulouse SA;FR;Toulouse
+0000200402;Papeteris Metz SAS;FR;Metz
+0000200403;Papeteris Metz SA;FR;Metz
+0000200404;Protectis Liège SA;BE;Liège
+0000200405;Securis Clermont-Ferrand SA;FR;Clermont-Ferrand
+0000200406;Papeteris Lille SAS;FR;Lille
+0000200407;Bureauplus Technologies Strasbourg SARL;FR;Strasbourg
+0000200408;Protectis Services Toulouse SAS;FR;Toulouse
+0000200409;Bureauplus Munich AG;DE;Munich
+0000200410;Papeteris Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200411;Papeteris Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200412;Fournipro Mulhouse SAS;FR;Mulhouse
+0000200413;Papeteris Strasbourg SAS;FR;Strasbourg
+0000200414;Papeteris Grenoble SARL;FR;Grenoble
+0000200415;Equipement Nantes SAS;FR;Nantes
+0000200416;Bureauplus Rennes SARL;FR;Rennes
+0000200417;Protectis Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200418;Bureauplus Grenoble SA;FR;Grenoble
+0000200419;Securis Mulhouse SAS;FR;Mulhouse
+0000200420;Papeteris Nantes SA;FR;Nantes
+0000200421;Bureauplus Lille SA;FR;Lille
+0000200422;Equipement Metz SAS;FR;Metz
+0000200423;Fournipro Metz SAS;FR;Metz
+0000200424;Bureauplus Lyon SAS;FR;Lyon
+0000200425;Papeteris Mulhouse SA;FR;Mulhouse
+0000200426;Bureauplus Rennes SA;FR;Rennes
+0000200427;Papeteris Systèmes Metz SA;FR;Metz
+0000200428;Bureauplus Nuremberg AG;DE;Nuremberg
+0000200429;Papeteris Lyon SAS;FR;Lyon
+0000200430;Papeteris Services Mulhouse SA;FR;Mulhouse
+0000200431;Protectis Europe Clermont-Ferrand SARL;FR;Clermont-Ferrand
+0000200432;Bureauplus Lyon SARL;FR;Lyon
+0000200433;Securis Metz SAS;FR;Metz
+0000200434;Bureauplus Lyon SA;FR;Lyon
+0000200435;Papeteris Europe Nantes SA;FR;Nantes
+0000200436;Bureauplus Technologies Munich AG;DE;Munich
+0000200437;Equipement Stuttgart AG;DE;Stuttgart
+0000200438;Bureauplus Gand SA;BE;Gand
+0000200439;Equipement Lille SAS;FR;Lille
+0000200440;Protectis Nantes SAS;FR;Nantes
+0000200441;Papeteris Rennes SAS;FR;Rennes
+0000200442;Fournipro Strasbourg SARL;FR;Strasbourg
+0000200443;Papeteris Mulhouse SAS;FR;Mulhouse
+0000200444;Securis Grenoble SARL;FR;Grenoble
+0000200445;Papeteris Groupe Grenoble SARL;FR;Grenoble
+0000200446;Fournipro Lyon SAS;FR;Lyon
+0000200447;Protectis Nuremberg AG;DE;Nuremberg
+0000200448;Protectis Nantes SARL;FR;Nantes
+0000200449;Protectis Mulhouse SARL;FR;Mulhouse
+0000200450;Equipement Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200451;Bureauplus Mulhouse SA;FR;Mulhouse
+0000200452;Papeteris Lyon SARL;FR;Lyon
+0000200453;Protectis Mulhouse SA;FR;Mulhouse
+0000200454;Equipement Nantes SA;FR;Nantes
+0000200455;Papeteris Technologies Clermont-Ferrand SAS;FR;Clermont-Ferrand
+0000200456;Bureauplus Nuremberg GmbH;DE;Nuremberg
+0000200457;Protectis Rennes SARL;FR;Rennes
+0000200458;Protectis Lille SA;FR;Lille
+0000200459;Fournipro Rennes SARL;FR;Rennes
+0000200460;Equipement Grenoble SAS;FR;Grenoble
+0000200461;Equipement Rennes SAS;FR;Rennes
+0000200462;Papeteris Industrie Grenoble SARL;FR;Grenoble
+0000200463;Protectis Lille SARL;FR;Lille
+0000200464;Fournipro Lille SARL;FR;Lille
+0000200465;Securis Toulouse SAS;FR;Toulouse
+0000200466;Bureauplus Nantes SA;FR;Nantes
+0000200467;Equipement Lille SARL;FR;Lille
+0000200468;Papeteris Systèmes Strasbourg SAS;FR;Strasbourg
+0000200469;Bureauplus Systèmes Rennes SA;FR;Rennes
+0000200470;Bureauplus Groupe Strasbourg SARL;FR;Strasbourg
